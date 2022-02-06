@@ -17,8 +17,8 @@ import com.xyztechnology.product.service.ProductService;
  *
  */
 @Service
-public class ProductServiceImpl implements ProductService{
-	
+public class ProductServiceImpl implements ProductService {
+
 	@Autowired
 	private ProductRepository productRepository;
 

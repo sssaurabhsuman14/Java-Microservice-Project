@@ -1,6 +1,5 @@
 package com.xyztechnology.product.controller;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,21 +14,20 @@ import com.xyztechnology.product.service.ProductService;
 @RestController
 @RequestMapping("/product")
 public class ProductController {
-	
-	
+
 	@Autowired
 	private ProductService productService;
-	
+
 	@RequestMapping(value = "/getAll", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getProducts(){
-		
-		return new ResponseEntity<>(productService.getProducts(),HttpStatus.OK);
+	public ResponseEntity<?> getProducts() {
+
+		return new ResponseEntity<>(productService.getProducts(), HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "/get/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> getProduct(@PathVariable("id") Long id){
-		
-		return new ResponseEntity<>(productService.getProduct(id),HttpStatus.OK);
+	public ResponseEntity<?> getProduct(@PathVariable("id") Long id) {
+
+		return new ResponseEntity<>(productService.getProduct(id), HttpStatus.OK);
 	}
 
 }

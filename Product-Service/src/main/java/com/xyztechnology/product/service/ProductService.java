@@ -15,9 +15,9 @@ import com.xyztechnology.product.Product;
  */
 @Service
 public interface ProductService {
-	
+
 	public List<Product> getProducts();
-	
+
 	public Product getProduct(Long id);
 
 }
